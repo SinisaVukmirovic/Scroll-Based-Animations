@@ -68,26 +68,38 @@ main {
     }
 
     & img {
-        max-width: 700px;
-        scale: .8;
-        opacity: 0;
+        max-width: 600px;
+        margin-inline: auto;
     }
 }
 
 article {
     margin-block-end: 5rem;
 
-    & > img {
+    /* & > img {
+        scale: .8;
+        opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range-start: 20vh;
+        animation-range-end: 60vh;
+    } */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    article > img {
+        scale: .8;
+        opacity: 0;
         animation: fade-in linear forwards;
         animation-timeline: view();
         animation-range-start: 20vh;
         animation-range-end: 60vh;
     }
-}
-
-@keyframes fade-in {
-    to {
-        scale: 1;
-        opacity: 1;
+    
+    @keyframes fade-in {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
     }
 }
