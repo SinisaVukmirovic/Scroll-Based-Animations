@@ -103,7 +103,7 @@ main {
     }
 
     & img {
-        max-width: 600px;
+        width: 600px;
         margin-inline: auto;
     }
 }
@@ -150,5 +150,15 @@ footer {
         &:hover {
             color: #eee;
         }
+    }
+}
+
+@media (max-width: 414px) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+        padding: 0 2rem;
     }
 }
